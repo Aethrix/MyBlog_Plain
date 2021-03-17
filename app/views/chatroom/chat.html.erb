@@ -6,7 +6,7 @@
           <h3 class="panel-title text-center">MyBlog General Chatroom</h3>
         </div>
         <div class="panel-body">
-          <%= form_for(@message, html: { class: "ui reply form", role: "form" }, url: message_path, remote: true) do |c| %>
+          <%= form_for(@messages, html: { class: "ui reply form", role: "form" }, url: message_path, remote: true) do |c| %>
             <div class="form-group">
               <%= c.text_field :body, class: "form-control", placeholder: "Enter a message here...", rows: "3" %>
             </div>
@@ -15,7 +15,7 @@
           <div class="clearfix"></div>
           <hr class="margin-bottom-10">
           <div class="list-group list-group-dividered list-group-full" id="message-container">
-            <%= render @messages %>
+            <%= render @message %>
           </div>
         </div>
       </div>

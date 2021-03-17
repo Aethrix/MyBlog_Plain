@@ -2,7 +2,7 @@ class ChatroomController < ApplicationController
     before_action :user_signed_in?
     
     def chat
-        @message = Message.new
-        @messages = Message.all
+        @messages = Message.new
+        @message = Message.all
     end
-end
+end 
